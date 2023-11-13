@@ -7,7 +7,7 @@ from . import views
 urlpatterns = [
     path('account/', AccountView.as_view(), name='account'),
     path('account/<int:pid>/', UserAccountView.as_view(), name='user_profile'),
-    path('accounts/login/', LoginView.as_view(), name='login'),
+    path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('profile_edit/', ProfileEditView.as_view(), name='profile_edit'),
     #### password reset configrations ####

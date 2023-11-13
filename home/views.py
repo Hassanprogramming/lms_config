@@ -10,9 +10,9 @@ class HomeView(View):
     
 class AboutView(View):
     def get(self, request):
-        return render(request, "home/home.html")
+        return render(request, "home/about.html")
     
     
 class ContactView(View):
     def get(self, request):
-        return render(request, "home/home.html")
+        return render(request, "home/contact_us.html")
