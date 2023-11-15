@@ -1,0 +1,83 @@
+{% extends "main.html" %}{% load static %}{% block content %}
+  <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url({% static 'images/page-banner-2.jpg' %})">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-banner-cont">
+            <h2>Contact Us</h2>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-page" class="pt-70 pb-110">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-title mt-50">
+            <h5>تماس با ما</h5>
+            <h2>ارتباط با ما</h2>
+          </div>
+          <div class="contact-form mt-30">
+            <form action="#" method="post" class="luxury-contact-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="luxury-input">
+                    <input type="text" placeholder="نام" />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="luxury-input">
+                    <input type="email" placeholder="ایمیل" />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="luxury-textarea">
+                    <textarea placeholder="پیام"></textarea>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <button type="submit" class="luxury-button">ارسال پیام</button>
+                </div>
+              </div>
+            </form>            
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-info mt-50">
+            <div class="info-item">
+              <h4>آدرس</h4>
+              <p>خیابان نمونه، شهر نمونه، کشور نمونه</p>
+            </div>
+            <div class="info-item">
+              <h4>ایمیل</h4>
+              <p><a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+            <div class="info-item">
+              <h4>تلفن</h4>
+              <p><a href="tel:+123456789">+123 456 789</a></p>
+            </div>
+            <div class="info-item">
+              <h4>ساعات کاری</h4>
+              <p>شنبه - چهارشنبه: 9AM - 5PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

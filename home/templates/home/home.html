@@ -1,691 +1,784 @@
 {% extends "main.html" %}{% load static %}{% block content %}
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="TemplateMo">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!--====== Title ======-->
+    <title>Edubin - LMS Education HTML Template</title>
 
-    <title>Education Meeting HTML5 Template</title>
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
   </head>
 
-<body>
+  <body>
+    <!--====== SEARCH BOX PART START ======-->
 
-
-  <!-- ***** Main Banner Area Start ***** -->
-  <section class="section main-banner" id="top" data-section="section1">
-      <video autoplay muted loop id="bg-video">
-          <source src="{% static 'assets/images/course-video.mp4' %}" type="video/mp4" />
-      </video>
-
-      <div class="video-overlay header-text">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="caption">
-              <h6>Hello Students</h6>
-              <h2>Welcome to Education</h2>
-              <p>This is an edu meeting HTML CSS template provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_blank">TemplateMo website</a>. This is a Bootstrap v5.1.3 layout. The video background is taken from Pexels website, a group of young people by <a rel="nofollow" href="https://www.pexels.com/@pressmaster" target="_blank">Pressmaster</a>.</p>
-              <div class="main-button-red">
-                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
-              </div>
-          </div>
-              </div>
-            </div>
-          </div>
-      </div>
-  </section>
-  <!-- ***** Main Banner Area End ***** -->
-
-  <section class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-service-item owl-carousel">
-          
-            <div class="item">
-              <div class="icon">
-                <img src="{% static 'assets/images/service-icon-01.png' %}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Education</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{% static 'assets/images/service-icon-02.png' %}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Teachers</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{% static 'assets/images/service-icon-03.png' %}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Students</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{% static 'assets/images/service-icon-02.png' %}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Online Meeting</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{% static 'assets/images/service-icon-03.png' %}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Networking</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-          </div>
+    <div class="search-box">
+      <div class="serach-form">
+        <div class="closebtn">
+          <span></span>
+          <span></span>
         </div>
+        <form action="#">
+          <input type="text" placeholder="Search by keyword" />
+          <button><i class="fa fa-search"></i></button>
+        </form>
       </div>
+      <!-- serach form -->
     </div>
-  </section>
 
-  <section class="upcoming-meetings" id="meetings">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading">
-            <h2>Upcoming Meetings</h2>
+    <!--====== SEARCH BOX PART ENDS ======-->
+
+    <section
+      id="slider-part-3"
+      class="bg_cover"
+      style="background-image: url(images/slider/s-3.jpg)"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="slider-cont-3 text-center">
+              <h2>جستجو برای دوره‌های ترجیحی</h2>
+              <span>بیش از ۳۰۰۰+ دوره برای شما</span>
+            </div>
+            <!-- slider cont3 -->
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="categories">
-            <h4>Meeting Catgories</h4>
-            <ul>
-              <li><a href="#">Sed tempus enim leo</a></li>
-              <li><a href="#">Aenean molestie quis</a></li>
-              <li><a href="#">Cras et metus vestibulum</a></li>
-              <li><a href="#">Nam et condimentum</a></li>
-              <li><a href="#">Phasellus nec sapien</a></li>
-            </ul>
-            <div class="main-button-red">
-              <a href="meetings.html">All Upcoming Meetings</a>
+        <!-- row -->
+        <div class="slider-feature pt-30 d-none d-md-block">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="singel-slider-feature justify-content-center mt-30">
+                <div class="icon">
+                  <img src="images/all-icon/man.png" alt="آیکون" />
+                </div>
+                <div class="cont">
+                  <h3>۱۳۰۰۰</h3>
+                  <span>دانشجویان در سراسر جهان</span>
+                </div>
+              </div>
+              <!-- singel slider feature -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="singel-slider-feature justify-content-center mt-30">
+                <div class="icon">
+                  <img src="images/all-icon/book.png" alt="آیکون" />
+                </div>
+                <div class="cont">
+                  <h3>۴۰۰۰۵۰۹</h3>
+                  <span>دوره‌های در دسترس</span>
+                </div>
+              </div>
+              <!-- singel slider feature -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="singel-slider-feature justify-content-center mt-30">
+                <div class="icon">
+                  <img src="images/all-icon/expert.png" alt="آیکون" />
+                </div>
+                <div class="cont">
+                  <h3>مدرس ماهر</h3>
+                  <span>مدرسان ماهر</span>
+                </div>
+              </div>
+              <!-- singel slider feature -->
             </div>
           </div>
+          <!-- row -->
         </div>
-        <div class="col-lg-8">
+        <!-- slider feature -->
+      </div>
+      <!-- container -->
+    </section>
+
+    <!--====== SLIDER PART ENDS ======-->
+
+    <!--====== CATEGORY PART START ======-->
+
+    <section id="category-3" class="category-2-items pt-50 pb-80 gray-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="singel-items text-center mt-30">
+              <div class="items-image">
+                <img src="images/category/ctg-1.jpg" alt="دسته بندی" />
+              </div>
+              <div class="items-cont">
+                <a href="#">
+                  <h5>طراحی اپلیکیشن</h5>
+                  <span>۲۴ دوره</span>
+                </a>
+              </div>
+            </div>
+            <!-- singel items -->
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="singel-items text-center mt-30">
+              <div class="items-image">
+                <img src="images/category/ctg-1.jpg" alt="دسته بندی" />
+              </div>
+              <div class="items-cont">
+                <a href="#">
+                  <h5>طراحی UI/ UX</h5>
+                  <span>۱۰۳ دوره</span>
+                </a>
+              </div>
+            </div>
+            <!-- singel items -->
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="singel-items text-center mt-30">
+              <div class="items-image">
+                <img src="images/category/ctg-1.jpg" alt="دسته بندی" />
+              </div>
+              <div class="items-cont">
+                <a href="#">
+                  <h5>توسعه اپلیکیشن</h5>
+                  <span>۵۷ دوره</span>
+                </a>
+              </div>
+            </div>
+            <!-- singel items -->
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="singel-items text-center mt-30">
+              <div class="items-image">
+                <img src="images/category/ctg-1.jpg" alt="دسته بندی" />
+              </div>
+              <div class="items-cont">
+                <a href="#">
+                  <h5>عکاسی</h5>
+                  <span>۱۷ دوره</span>
+                </a>
+              </div>
+            </div>
+            <!-- singel items -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+
+    <!--====== CATEGORY PART ENDS ======-->
+
+    <!--====== COURSE PART START ======-->
+
+    <section id="course-part" class="pt-115 pb-115">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title pb-45">
+              <h5>دوره‌های ما</h5>
+              <h2>دوره‌های برگزیده</h2>
+            </div>
+            <!-- section title -->
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row course-slied mt-30">
+          <div class="col-lg-4">
+            <div class="singel-course-2">
+              <div class="thum">
+                <div class="image">
+                  <img src="images/course/cu-1.jpg" alt="دوره" />
+                </div>
+                <div class="price">
+                  <span>رایگان</span>
+                </div>
+                <div class="course-teacher">
+                  <div class="thum">
+                    <a href="courses-singel.html"><img src="images/course/teacher/t-1.jpg" alt="مربی" /></a>
+                  </div>
+                  <div class="name">
+                    <a href="#"><h6>مارک آنتم</h6></a>
+                  </div>
+                  <div class="review">
+                    <ul>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="cont">
+                <a href="#"><h4>یادگیری اصول جاوااسکریپت از ابتدا برای مبتدیان</h4></a>
+              </div>
+            </div>
+            <!-- singel course -->
+          </div>
+          <div class="col-lg-4">
+            <div class="singel-course-2">
+              <div class="thum">
+                <div class="image">
+                  <img src="images/course/cu-2.jpg" alt="دوره" />
+                </div>
+                <div class="price">
+                  <span>رایگان</span>
+                </div>
+                <div class="course-teacher">
+                  <div class="thum">
+                    <a href="courses-singel.html"><img src="images/course/teacher/t-2.jpg" alt="مربی" /></a>
+                  </div>
+                  <div class "name">
+                    <a href="#"><h6>مارک آنتم</h6></a>
+                  </div>
+                  <div class="review">
+                    <ul>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="cont">
+                <a href="#"><h4>یادگیری اصول جاوااسکریپت از ابتدا برای مبتدیان</h4></a>
+              </div>
+            </div>
+            <!-- singel course -->
+          </div>
+          <div class="col-lg-4">
+            <div class="singel-course-2">
+              <div class="thum">
+                <div class="image">
+                  <img src="images/course/cu-3.jpg" alt="دوره" />
+                </div>
+                <div class="price">
+                  <span>رایگان</span>
+                </div>
+                <div class="course-teacher">
+                  <div class="thum">
+                    <a href="courses-singel.html"><img src="images/course/teacher/t-3.jpg" alt="مربی" /></a>
+                  </div>
+                  <div class="name">
+                    <a href="#"><h6>مارک آنتم</h6></a>
+                  </div>
+                  <div class="review">
+                    <ul>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="cont">
+                <a href="#"><h4>یادگیری اصول جاوااسکریپت از ابتدا برای مبتدیان</h4></a>
+              </div>
+            </div>
+            <!-- singel course -->
+          </div>
+          <div class="col-lg-4">
+            <div class="singel-course-2">
+              <div class="thum">
+                <div class="image">
+                  <img src="images/course/cu-4.jpg" alt="دوره" />
+                </div>
+                <div class="price">
+                  <span>رایگان</span>
+                </div>
+                <div class="course-teacher">
+                  <div class="thum">
+                    <a href="courses-singel.html"><img src="images/course/teacher/t-4.jpg" alt="مربی" /></a>
+                  </div>
+                  <div class="name">
+                    <a href="#"><h6>مارک آنتم</h6></a>
+                  </div>
+                  <div class="review">
+                    <ul>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="cont">
+                <a href="#"><h4>یادگیری اصول جاوااسکریپت از ابتدا برای مبتدیان</h4></a>
+              </div>
+            </div>
+            <!-- singel course -->
+          </div>
+          <div class="col-lg-4">
+            <div class="singel-course-2">
+              <div class="thum">
+                <div class="image">
+                  <img src="images/course/cu-5.jpg" alt="دوره" />
+                </div>
+                <div class="price">
+                  <span>رایگان</span>
+                </div>
+                <div class="course-teacher">
+                  <div class="thum">
+                    <a href="courses-singel.html"><img src="images/course/teacher/t-5.jpg" alt="مربی" /></a>
+                  </div>
+                  <div class="name">
+                    <a href="#"><h6>مارک آنتم</h6></a>
+                  </div>
+                  <div class="review">
+                    <ul>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="cont">
+                <a href="#"><h4>یادگیری اصول جاوااسکریپت از ابتدا برای مبتدیان</h4></a>
+              </div>
+            </div>
+            <!-- singel course -->
+          </div>
+        </div>
+        <!-- course slied -->
+      </div>
+      <!-- container -->
+    </section>
+
+
+    <!--====== قسمت شمارنده شروع می‌شود ======-->
+
+    <section id="count-down-part" class="bg_cover pt-70 pb-120" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-6">
+            <div class="count-down-cont pt-50">
+              <h3>دریافت صدها دوره آنلاین رایگان</h3>
+              <h2>هم‌اکنون ثبت‌نام کنید</h2>
+              <div data-countdown="2019/03/01"></div>
+            </div>
+            <!-- count down cont -->
+          </div>
+          <div class="col-lg-5 offset-lg-1 col-md-8">
+            <div class="category-form category-form-3 pt-50">
+              <div class="form-title text-center">
+                <h3>دریافت 50 دوره رایگان!</h3>
+                <span>هم‌اکنون ثبت‌نام کنید</span>
+              </div>
+              <div class="main-form">
+                <form action="#">
+                  <div class="singel-form">
+                    <input type="text" placeholder="نام شما" />
+                  </div>
+                  <div class="singel-form">
+                    <input type="email" placeholder="ایمیل شما" />
+                  </div>
+                  <div class="singel-form">
+                    <input type="text" placeholder="تلفن شما" />
+                  </div>
+                  <div class="singel-form">
+                    <button class="main-btn" type="button">هم‌اکنون دریافت کنید</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- category form -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+
+    <!--====== قسمت شمارنده پایان می‌یابد ======-->
+
+    <!--====== قسمت شمارنده شروع می‌شود ======-->
+
+    <div id="counter-part" class="bg_cover pt-25 pb-70 gray-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-counter counter-3 text-center mt-40">
+              <span><span class="counter">30,000</span>+</span>
+              <p>دانشجویان ثبت‌نام شده</p>
+            </div>
+            <!-- singel counter -->
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-counter counter-3 text-center mt-40">
+              <span><span class="counter">41,000</span>+</span>
+              <p>دوره‌ها بارگذاری شده</p>
+            </div>
+            <!-- singel counter -->
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-counter counter-3 text-center mt-40">
+              <span><span class="counter">11,000</span>+</span>
+              <p>افراد مجوز دار</p>
+            </div>
+            <!-- singel counter -->
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="singel-counter counter-3 text-center mt-40">
+              <span><span class="counter">39,000</span>+</span>
+              <p>معلمان جهانی</p>
+            </div>
+            <!-- singel counter -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+
+    <!--====== قسمت شمارنده پایان می‌یابد ======-->
+
+    <!--====== قسمت رویداد 2 شروع می‌شود ======-->
+
+    <section id="event-part" class="pt-120 pb-120">
+      <div class="container">
+        <div class="event-bg bg_cover" style="background-image: url(images/bg-3.jpg)">
           <div class="row">
-            <div class="col-lg-6">
-              <div class="meeting-item">
-                <div class="thumb">
-                  <div class="price">
-                    <span>$22.00</span>
-                  </div>
-                  <a href="meeting-details.html"><img src="{% static 'assets/images/meeting-01.jpg' %}" alt="New Lecturer Meeting"></a>
+            <div class="col-lg-5 offset-lg-6 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+              <div class="event-2 pt-90 pb-70">
+                <div class="event-title">
+                  <h3>رویدادهای آتی</h3>
                 </div>
-                <div class="down-content">
-                  <div class="date">
-                    <h6>Nov <span>10</span></h6>
-                  </div>
-                  <a href="meeting-details.html"><h4>New Lecturers Meeting</h4></a>
-                  <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                </div>
+                <!-- event title -->
+                <ul>
+                  <li>
+                    <div class="singel-event">
+                      <span><i class="fa fa-calendar"></i> 2 دسامبر 2018</span>
+                      <a href="events-singel.html"><h4>کارگاه تمیز کردن دانشگاه</h4></a>
+                      <span><i class="fa fa-clock-o"></i> 10:00 صبح - 3:00 بعدازظهر</span>
+                      <span><i class="fa fa-map-marker"></i> سالن کنفرانس Rc</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="singel-event">
+                      <span><i class="fa fa-calendar"></i> 2 دسامبر 2018</span>
+                      <a href="events-singel.html"><h4>توپق قهرمانانه</h4></a>
+                      <span><i class="fa fa-clock-o"></i> 10:00 صبح - 3:00 بعدازظهر</span>
+                      <span><i class="fa fa-map-marker"></i> سالن کنفرانس Rc</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="singel-event">
+                      <span><i class="fa fa-calendar"></i> 2 دسامبر 2018</span>
+                      <a href="events-singel.html"><h4>کنفرانس محیط زیست</h4></a>
+                      <span><i class="fa fa-clock-o"></i> 10:00 صبح - 3:00 بعدازظهر</span>
+                      <span><i class="fa fa-map-marker"></i> سالن کنفرانس Rc</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="meeting-item">
-                <div class="thumb">
-                  <div class="price">
-                    <span>$36.00</span>
-                  </div>
-                  <a href="meeting-details.html"><img src="{% static 'assets/images/meeting-02.jpg' %}" alt="Online Teaching"></a>
-                </div>
-                <div class="down-content">
-                  <div class="date">
-                    <h6>Nov <span>24</span></h6>
-                  </div>
-                  <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
-                  <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="meeting-item">
-                <div class="thumb">
-                  <div class="price">
-                    <span>$14.00</span>
-                  </div>
-                  <a href="meeting-details.html"><img src="{% static 'assets/images/meeting-03.jpg' %}" alt="Higher Education"></a>
-                </div>
-                <div class="down-content">
-                  <div class="date">
-                    <h6>Nov <span>26</span></h6>
-                  </div>
-                  <a href="meeting-details.html"><h4>Higher Education Conference</h4></a>
-                  <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="meeting-item">
-                <div class="thumb">
-                  <div class="price">
-                    <span>$48.00</span>
-                  </div>
-                  <a href="meeting-details.html"><img src="{% static 'assets/images/meeting-04.jpg' %}" alt="Student Training"></a>
-                </div>
-                <div class="down-content">
-                  <div class="date">
-                    <h6>Nov <span>30</span></h6>
-                  </div>
-                  <a href="meeting-details.html"><h4>Student Training Meetup</h4></a>
-                  <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
-                </div>
-              </div>
+              <!-- event 2 -->
             </div>
           </div>
+          <!-- row -->
         </div>
       </div>
-    </div>
-  </section>
+      <!-- container -->
+    </section>
 
-  <section class="apply-now" id="apply">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="item">
-                <h3>APPLY FOR BACHELOR DEGREE</h3>
-                <p>You are allowed to use this edu meeting CSS template for your school or university or business. You can feel free to modify or edit this layout.</p>
-                <div class="main-button-red">
-                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
-              </div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="item">
-                <h3>APPLY FOR BACHELOR DEGREE</h3>
-                <p>You are not allowed to redistribute the template ZIP file on any other template website. Please contact us for more information.</p>
-                <div class="main-button-yellow">
-                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="accordions is-first-expanded">
-            <article class="accordion">
-                <div class="accordion-head">
-                    <span>About Edu Meeting HTML Template</span>
-                    <span class="icon">
-                        <i class="icon fa fa-chevron-right"></i>
-                    </span>
-                </div>
-                <div class="accordion-body">
-                    <div class="content">
-                        <p>If you want to get the latest collection of HTML CSS templates for your websites, you may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too CSS website</a>. If you need a working contact form script, please visit <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more info.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="accordion">
-                <div class="accordion-head">
-                    <span>HTML CSS Bootstrap Layout</span>
-                    <span class="icon">
-                        <i class="icon fa fa-chevron-right"></i>
-                    </span>
-                </div>
-                <div class="accordion-body">
-                    <div class="content">
-                        <p>Etiam posuere metus orci, vel consectetur elit imperdiet eu. Cras ipsum magna, maximus at semper sit amet, eleifend eget neque. Nunc facilisis quam purus, sed vulputate augue interdum vitae. Aliquam a elit massa.<br><br>
-                        Nulla malesuada elit lacus, ac ultricies massa varius sed. Etiam eu metus eget nibh consequat aliquet. Proin fringilla, quam at euismod porttitor, odio odio tempus ligula, ut feugiat ex erat nec mauris. Donec viverra velit eget lectus sollicitudin tincidunt.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="accordion">
-                <div class="accordion-head">
-                    <span>Please tell your friends</span>
-                    <span class="icon">
-                        <i class="icon fa fa-chevron-right"></i>
-                    </span>
-                </div>
-                <div class="accordion-body">
-                    <div class="content">
-                        <p>Ut vehicula mauris est, sed sodales justo rhoncus eu. Morbi porttitor quam velit, at ullamcorper justo suscipit sit amet. Quisque at suscipit mi, non efficitur velit.<br><br>
-                        Cras et tortor semper, placerat eros sit amet, porta est. Mauris porttitor sapien et quam volutpat luctus. Nullam sodales ipsum ac neque ultricies varius.</p>
-                    </div>
-                </div>
-            </article>
-            <article class="accordion last-accordion">
-                <div class="accordion-head">
-                    <span>Share this to your colleagues</span>
-                    <span class="icon">
-                        <i class="icon fa fa-chevron-right"></i>
-                    </span>
-                </div>
-                <div class="accordion-body">
-                    <div class="content">
-                        <p>Maecenas suscipit enim libero, vel lobortis justo condimentum id. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br><br>
-                        Sed eleifend metus sit amet magna tristique, posuere laoreet arcu semper. Nulla pellentesque ut tortor sit amet maximus. In eu libero ullamcorper, semper nisi quis, convallis nisi.</p>
-                    </div>
-                </div>
-            </article>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!--====== قسمت رویداد 2 پایان می‌یابد ======-->
 
-  <section class="our-courses" id="courses">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading">
-            <h2>Our Popular Courses</h2>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="owl-courses-item owl-carousel">
-            <div class="item">
-              <img src="{% static 'assets/images/course-01.jpg' %}" alt="Course One">
-              <div class="down-content">
-                <h4>Morbi tincidunt elit vitae justo rhoncus</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$160</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-02.jpg' %}" alt="Course Two">
-              <div class="down-content">
-                <h4>Curabitur molestie dignissim purus vel</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$180</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-03.jpg' %}" alt="">
-              <div class="down-content">
-                <h4>Nulla at ipsum a mauris egestas tempor</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$140</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-04.jpg' %}" alt="">
-              <div class="down-content">
-                <h4>Aenean molestie quis libero gravida</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$120</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-01.jpg' %}" alt="">
-              <div class="down-content">
-                <h4>Lorem ipsum dolor sit amet adipiscing elit</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$250</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-02.jpg' %}" alt="">
-              <div class="down-content">
-                <h4>TemplateMo is the best website for Free CSS</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$270</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-03.jpg' %}" alt="">
-              <div class="down-content">
-                <h4>Web Design Templates at your finger tips</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$340</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-04.jpg' %}" alt="">
-              <div class="down-content">
-                <h4>Please visit our website again</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$360</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-01.jpg' %}" alt="">
-              <div class="down-content">
-                <h4>Responsive HTML Templates for you</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$400</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-02.jpg' %}" alt="">
-              <div class="down-content">
-                <h4>Download Free CSS Layouts for your business</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$430</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-03.jpg' %}" alt="">
-              <div class="down-content">
-                <h4>Morbi in libero blandit lectus cursus</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$480</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="{% static 'assets/images/course-04.jpg' %}" alt="">
-              <div class="down-content">
-                <h4>Curabitur molestie dignissim purus</h4>
-                <div class="info">
-                  <div class="row">
-                    <div class="col-8">
-                      <ul>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                       <span>$560</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="our-facts">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-lg-12">
-              <h2>A Few Facts About Our University</h2>
+    <!--====== قسمت معلمان شروع می‌شود ======-->
+
+    <section id="teachers-part" class="pt-65 pb-120 gray-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title mt-50 pb-25">
+              <h5>معلمان برتر</h5>
+              <h2>معلمان برجسته</h2>
             </div>
-            <div class="col-lg-6">
+            <!-- section title -->
+            <div class="teachers-2">
               <div class="row">
-                <div class="col-12">
-                  <div class="count-area-content percentage">
-                    <div class="count-digit">94</div>
-                    <div class="count-title">Succesed Students</div>
+                <div class="col-md-6">
+                  <div class="teachers-2-singel mt-30">
+                    <div class="thum">
+                      <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher" />
+                    </div>
+                    <div class="cont">
+                      <a href="teachers-singel.html"><h5>مارک آنتم</h5></a>
+                      <p>کارشناسی JAVA</p>
+                      <span><i class="fa fa-book"></i>10 دوره</span>
+                    </div>
                   </div>
+                  <!-- teachers 2 singel -->
                 </div>
-                <div class="col-12">
-                  <div class="count-area-content">
-                    <div class="count-digit">126</div>
-                    <div class="count-title">Current Teachers</div>
+                <div class="col-md-6">
+                  <div class="teachers-2-singel mt-30">
+                    <div class="thum">
+                      <img src="images/teachers/teacher-2/tc-2.jpg" alt="Teacher" />
+                    </div>
+                    <div class="cont">
+                      <a href="teachers-singel.html"><h5>هلن مارک</h5></a>
+                      <p>کارشناسی Laravel</p>
+                      <span><i class="fa fa-book"></i>05 دوره</span>
+                    </div>
                   </div>
+                  <!-- teachers 2 singel -->
+                </div>
+                <div class="col-md-6">
+                  <div class="teachers-2-singel mt-30">
+                    <div class="thum">
+                      <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher" />
+                    </div>
+                    <div class="cont">
+                      <a href="teachers-singel.html"><h5>ماریا نور</h5></a>
+                      <p>کارشناسی JAVA</p>
+                      <span><i class="fa fa-book"></i>10 دوره</span>
+                    </div>
+                  </div>
+                  <!-- teachers 2 singel -->
+                </div>
+                <div class="col-md-6">
+                  <div class="teachers-2-singel mt-30">
+                    <div class="thum">
+                      <img src="images/teachers/teacher-2/tc-1.jpg" alt="Teacher" />
+                    </div>
+                    <div class="cont">
+                      <a href="teachers-singel.html"><h5>آلن هن</h5></a>
+                      <p>کارشناسی Laravel</p>
+                      <span><i class="fa fa-book"></i>05 دوره</span>
+                    </div>
+                  </div>
+                  <!-- teachers 2 singel -->
                 </div>
               </div>
+              <!-- row -->
             </div>
-            <div class="col-lg-6">
+            <!-- teachers 2 -->
+          </div>
+          <div class="col-lg-6">
+            <div class="happy-student mt-55">
+              <div class="happy-title">
+                <h3>دانش‌آموزان خوشحال</h3>
+              </div>
+              <div class="student-slied">
+                <div class="singel-student">
+                  <img src="images/teachers/teacher-2/quote.png" alt="Quote" />
+                  <p>
+                    Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis
+                    sem nibh id elit. Duis sed odio sit amet
+                  </p>
+                  <h6>مارک آنتم</h6>
+                  <span>کارشناسی، مهندسی</span>
+                </div>
+                <!-- singel student -->
+
+                <div class="singel-student">
+                  <img src="images/teachers/teacher-2/quote.png" alt="Quote" />
+                  <p>
+                    Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis
+                    sem nibh id elit. Duis sed odio sit amet
+                  </p>
+                  <h6>مارک آنتم</h6>
+                  <span>کارشناسی، مهندسی</span>
+                </div>
+                <!-- singel student -->
+
+                <div class="singel-student">
+                  <img src="images/teachers/teacher-2/quote.png" alt="Quote" />
+                  <p>
+                    Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis
+                    sem nibh id elit. Duis sed odio sit amet
+                  </p>
+                  <h6>مارک آنتم</h6>
+                  <span>کارشناسی، مهندسی</span>
+                </div>
+                <!-- singel student -->
+              </div>
+              <!-- student slied -->
+              <div class="student-image">
+                <img src="images/teachers/teacher-2/happy.png" alt="تصویر" />
+              </div>
+            </div>
+            <!-- happy student -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+
+    <!--====== قسمت معلمان پایان می‌یابد ======-->
+
+    <!--====== قسمت اخبار شروع می‌شود ======-->
+
+    <section id="news-part" class="pt-115 pb-110">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title pb-50">
+              <h5>آخرین اخبار</h5>
+              <h2>از اخبار</h2>
+            </div>
+            <!-- section title -->
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="singel-news mt-30">
+              <div class="news-thum pb-25">
+                <img src="images/news/n-1.jpg" alt="اخبار" />
+              </div>
+              <div class="news-cont">
+                <ul>
+                  <li><a href="#"><i class="fa fa-calendar"></i>2 دسامبر 2018</a></li>
+                  <li><a href="#"> <span>توسط</span> آدام لین</a></li>
+                </ul>
+                <a href="blog-singel.html"><h3>نکات برای کسب CGPA بالا در زندگی دانشگاهی</h3></a>
+                <p>
+                  Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem
+                  quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis
+                  sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
+                  accumsan ipsum velit. Nam nec tellus a odio tincidunt .
+                </p>
+              </div>
+            </div>
+            <!-- singel news -->
+          </div>
+          <div class="col-lg-6">
+            <div class="singel-news news-list">
               <div class="row">
-                <div class="col-12">
-                  <div class="count-area-content new-students">
-                    <div class="count-digit">2345</div>
-                    <div class="count-title">New Students</div>
+                <div class="col-sm-4">
+                  <div class="news-thum mt-30">
+                    <img src="images/news/ns-1.jpg" alt="اخبار" />
                   </div>
-                </div> 
-                <div class="col-12">
-                  <div class="count-area-content">
-                    <div class="count-digit">32</div>
-                    <div class="count-title">Awards</div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="news-cont mt-30">
+                    <ul>
+                      <li><a href="#"><i class="fa fa-calendar"></i>2 دسامبر 2018</a></li>
+                      <li><a href="#"> <span>توسط</span> آدام لین</a></li>
+                    </ul>
+                    <a href="blog-singel.html"><h3>ارتباط فکری</h3></a>
+                    <p>
+                      Gravida nibh vel velit auctor aliquetn sollicitudirem
+                      quibibendum auci elit cons vel.
+                    </p>
                   </div>
                 </div>
               </div>
+              <!-- row -->
             </div>
-          </div>
-        </div> 
-        <div class="col-lg-6 align-self-center">
-          <div class="video">
-            <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank"><img src="{% static 'assets/images/play-icon.png' %}" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-us" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-9 align-self-center">
-          <div class="row">
-            <div class="col-lg-12">
-              <form id="contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <h2>Let's get in touch</h2>
-                  </div>
-                  <div class="col-lg-4">
-                    <fieldset>
-                      <input name="name" type="text" id="name" placeholder="YOURNAME...*" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-4">
-                    <fieldset>
-                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required="">
-                  </fieldset>
-                  </div>
-                  <div class="col-lg-4">
-                    <fieldset>
-                      <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
-                    </fieldset>
+            <!-- singel news -->
+            <div class="singel-news news-list">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="news-thum mt-30">
+                    <img src="images/news/ns-2.jpg" alt="اخبار" />
                   </div>
                 </div>
-              </form>
+                <div class="col-sm-8">
+                  <div class="news-cont mt-30">
+                    <ul>
+                      <li><a href="#"><i class="fa fa-calendar"></i>2 دسامبر 2018</a></li>
+                      <li><a href="#"> <span>توسط</span> آدام لین</a></li>
+                    </ul>
+                    <a href="blog-singel.html"><h3>مطالعه شما را کامل می‌کند</h3></a>
+                    <p>
+                      Gravida nibh vel velit auctor aliquetn sollicitudirem
+                      quibibendum auci elit cons vel.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- row -->
+            </div>
+            <!-- singel news -->
+            <div class="singel-news news-list">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="news-thum mt-30">
+                    <img src="images/news/ns-3.jpg" alt="اخبار" />
+                  </div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="news-cont mt-30">
+                    <ul>
+                      <li><a href="#"><i class="fa fa-calendar"></i>2 دسامبر 2018</a></li>
+                      <li><a href="#"> <span>توسط</span> آدام لین</a></li>
+                    </ul>
+                    <a href="blog-singel.html"><h3>آموزش فناوری اکنون...</h3></a>
+                    <p>
+                      Gravida nibh vel velit auctor aliquetn sollicitudirem
+                      quibibendum auci elit cons vel.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- row -->
+            </div>
+            <!-- singel news -->
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+
+    <!--====== قسمت اخبار پایان می‌یابد ======-->
+
+    <!--====== PATNAR LOGO PART START ======-->
+
+    <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
+      <div class="container">
+        <div class="row patnar-slied">
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="images/patnar-logo/p-1.png" alt="Logo" />
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="images/patnar-logo/p-2.png" alt="Logo" />
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="images/patnar-logo/p-3.png" alt="Logo" />
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="images/patnar-logo/p-4.png" alt="Logo" />
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="images/patnar-logo/p-2.png" alt="Logo" />
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="singel-patnar text-center mt-40">
+              <img src="images/patnar-logo/p-3.png" alt="Logo" />
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
-          <div class="right-info">
-            <ul>
-              <li>
-                <h6>Phone Number</h6>
-                <span>010-020-0340</span>
-              </li>
-              <li>
-                <h6>Email Address</h6>
-                <span>info@meeting.edu</span>
-              </li>
-              <li>
-                <h6>Street Address</h6>
-                <span>Rio de Janeiro - RJ, 22795-008, Brazil</span>
-              </li>
-              <li>
-                <h6>Website URL</h6>
-                <span>www.meeting.edu</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <!-- row -->
       </div>
+      <!-- container -->
     </div>
-  </section>
-</body>
 
-</body>
+    <!--====== PATNAR LOGO PART ENDS ======-->
+  </body>
 </html>
 {% endblock %}

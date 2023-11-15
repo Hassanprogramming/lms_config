@@ -31,7 +31,7 @@ class AccountView(View):
             else:
                 users = User.objects.all()  # Show all users by default
     
-            return render(request, 'account/accounts.html', {'users': users, 'form': form})
+            return render(request, 'accounts/accounts.html', {'users': users, 'form': form})
         else:
             return redirect('access')
 
@@ -56,7 +56,7 @@ class UserAccountView(View):
             form = ProfileEdit_Form(request.POST, request.FILES, instance=users)
             if form.is_valid():
                 form.save()
-                return redirect('account')
+                return redirect('accounts')
             else:
                 context = {
                     'form': form,
@@ -75,7 +75,7 @@ class LoginView(View):
         context = {
             'form': form,
         }
-        return render(request, 'account/login.html', context)
+        return render(request, 'accounts/login.html', context)
     
     def post(self, request):
         form = AuthenticationForm(request, data=request.POST)
@@ -90,7 +90,7 @@ class LoginView(View):
         context={
             'form': form, 
         }
-        return render(request, 'account/login.html', context)
+        return render(request, 'accounts/login.html', context)
     
         
 class LogoutView(View):
@@ -105,7 +105,7 @@ class ProfileEditView(View):
         context = {
             'form': form
         }
-        return render(request, 'account/profile.html', context)
+        return render(request, 'accounts/profile.html', context)
     
     @method_decorator(login_required)
     def post(self,request):
@@ -118,7 +118,7 @@ class ProfileEditView(View):
             context = {
                 'form': form
             }
-            return render(request, 'account/profile.html', context)
+            return render(request, 'accounts/profile.html', context)
         
         
 @method_decorator(login_required, name='dispatch')
