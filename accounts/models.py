@@ -29,6 +29,18 @@ class UserManager(BaseUserManager):
         return user 
 
 
+class ProfielImages(models.Model):
+    class Meta:
+        verbose_name = "تصاویر پروفایل"
+        verbose_name_plural = "تصاویر پروفایل"
+    
+    name = models.CharField(verbose_name="نام تصویر", max_length=250)    
+    img = models.ImageField(verbose_name="تصویر پروفایل", upload_to="images/")
+    
+    def __str__(self):
+        return self.name
+
+
 class User(AbstractBaseUser, PermissionsMixin):
     class Meta:
         verbose_name = "کاربر"
@@ -38,11 +50,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     phone = models.BigIntegerField(verbose_name="شماره تلفن", unique=True)
     email = models.EmailField(verbose_name="ایمیل", max_length=100)
     id_number = models.FloatField(verbose_name="کد ملی", blank=True, null=True)
+    address = models.CharField(verbose_name="آدرس", max_length=500)
+    birth_date = models.DateTimeField(auto_now_add=False, verbose_name="تاریخ تولد", null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True, verbose_name="تاریخ ایجاد")
     is_admin = models.BooleanField(default=True, verbose_name="مدیر")
     is_active = models.BooleanField(default=True, verbose_name="فعال")
     is_student = models.BooleanField(default=True, verbose_name="دانشجو")
-    profile_img = models.ImageField(upload_to='images/', verbose_name="تصویر پروفایل")
+    profile_img = models.ManyToManyField(ProfielImages, verbose_name="تصویر پروفایل")
     password1 = models.CharField(max_length=150, verbose_name="رمز عبور")
     password2 = models.CharField(max_length=150, verbose_name="تایید رمز عبور")
     objects = UserManager()

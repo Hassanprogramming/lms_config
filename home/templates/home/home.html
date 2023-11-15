@@ -377,18 +377,19 @@
                 <span>هم‌اکنون ثبت‌نام کنید</span>
               </div>
               <div class="main-form">
-                <form action="#">
+                <form action="#" method="post">
+                  {% csrf_token %}
                   <div class="singel-form">
-                    <input type="text" placeholder="نام شما" />
+                    <input type="text" name="user_name" placeholder="نام شما" />
                   </div>
                   <div class="singel-form">
-                    <input type="email" placeholder="ایمیل شما" />
+                    <input type="email" name="email" placeholder="ایمیل شما" />
                   </div>
                   <div class="singel-form">
-                    <input type="text" placeholder="تلفن شما" />
+                    <input type="text" name="text" placeholder="پیام شما" />
                   </div>
                   <div class="singel-form">
-                    <button class="main-btn" type="button">هم‌اکنون دریافت کنید</button>
+                    <button class="main-btn" type="submit">ثبت‌ درخواست</button>
                   </div>
                 </form>
               </div>

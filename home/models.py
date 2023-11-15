@@ -1,6 +1,10 @@
 from django.db import models
 
 class AboutUs(models.Model):
+    class Meta:
+        verbose_name = "درباره ما"
+        verbose_name_plural = "درباره ما"
+        
     title = models.CharField(max_length=200)
     content = models.TextField()
 
@@ -8,6 +12,10 @@ class AboutUs(models.Model):
         return self.title
 
 class ContactUs(models.Model):
+    class Meta:
+        verbose_name = "تماس با ما"
+        verbose_name_plural = "تماس با ما"
+        
     name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()
@@ -16,6 +24,10 @@ class ContactUs(models.Model):
         return f"{self.name} - {self.email}"
     
 class Comment(models.Model):
+    class Meta:
+        verbose_name = "کامنت ها"
+        verbose_name_plural = "کامنت ها"
+        
     user_name = models.CharField(max_length=100)
     email = models.EmailField()
     text = models.TextField()

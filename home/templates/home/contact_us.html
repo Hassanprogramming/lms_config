@@ -27,24 +27,25 @@
           </div>
           <div class="contact-form mt-30">
             <form action="#" method="post" class="luxury-contact-form">
+              {% csrf_token %}
               <div class="row">
                 <div class="col-md-6">
                   <div class="luxury-input">
-                    <input type="text" placeholder="نام" />
+                    <input type="text" name="name" placeholder="نام" />
                     <span class="highlight"></span>
                     <span class="bar"></span>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="luxury-input">
-                    <input type="email" placeholder="ایمیل" />
+                    <input type="email" name="email" placeholder="ایمیل" />
                     <span class="highlight"></span>
                     <span class="bar"></span>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="luxury-textarea">
-                    <textarea placeholder="پیام"></textarea>
+                    <textarea name="message" placeholder="پیام"></textarea>
                     <span class="highlight"></span>
                     <span class="bar"></span>
                   </div>

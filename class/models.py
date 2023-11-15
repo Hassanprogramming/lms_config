@@ -53,6 +53,7 @@ class Classes(models.Model):
     text = tinymce_models.HTMLField(verbose_name="توضیحات کلاس")
     category = models.ForeignKey(ClassCategory, verbose_name="دسته بندی کلاس", on_delete=models.CASCADE)
     display = models.BooleanField(verbose_name="نمایش داده شود؟؟", default=False)
+    total_hours = models.FloatField(verbose_name="مدت زمان کل دوره", null=True, blank=True)
     img = models.ManyToManyField(ImageClass, verbose_name="تصاویر کلاس", blank=True)
     video = models.ManyToManyField(VideoClass, verbose_name="فیلم های کلاس", blank=True)
     slug = models.SlugField(max_length=150, unique=True)

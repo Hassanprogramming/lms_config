@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User
+from .models import *
 
 class CustomUserAdmin(admin.ModelAdmin):
     list_display = ('name', 'phone', 'email', 'is_active', 'is_admin', 'jtime', 'jlast_login')
@@ -7,9 +7,9 @@ class CustomUserAdmin(admin.ModelAdmin):
     list_filter = ('is_active', 'is_admin')
 
     fieldsets = (
-        ('Authentication', {'fields': ('name', 'password')}),
-        ('Personal Info', {'fields': ('phone', 'email', 'profile_img')}),
-        ('Permissions', {'fields': ('is_admin', 'is_active', 'is_student')}),
+        ('Authentication', {'fields': ('name', 'password1', 'password2')}),
+        ('Personal Info', {'fields': ('phone', 'email', 'profile_img', 'id_number', 'address', 'birth_date')}),
+        ('Permissions', {'fields': ('is_admin', 'is_active', 'is_student', 'user_permissions', 'groups')}),
     )
     
     add_fieldsets = (
@@ -24,3 +24,4 @@ class CustomUserAdmin(admin.ModelAdmin):
     readonly_fields = ('date_created', 'jtime', 'jlast_login')
 
 admin.site.register(User, CustomUserAdmin)
+admin.site.register(ProfielImages)
