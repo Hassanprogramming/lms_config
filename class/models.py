@@ -18,6 +18,17 @@ class ClassCategory(models.Model):
         return self.name
     
 
+class VideoCategory(models.Model):
+    class Meta:
+        verbose_name = "video category"
+        verbose_name_plural = "video category"
+
+    name = models.CharField(max_length=150)
+    
+    def __str__(self):
+        return self.name
+
+
 class VideoClass(models.Model):
     class Meta:
         verbose_name = "فیلم های کلاس ها"
@@ -25,7 +36,9 @@ class VideoClass(models.Model):
         
     name = models.CharField(verbose_name="نام فیلم", max_length=250)
     text = tinymce_models.HTMLField(verbose_name="توضیحات فیلم")
-    video = models.FileField(verbose_name="فیلم", upload_to="media/")
+    video_link = models.CharField(verbose_name="لینک فیلم", max_length=550, null=True, blank=True)
+    video = models.FileField(verbose_name="فیلم", upload_to="media/", null=True, blank=True)
+    video_category = models.ForeignKey(VideoCategory, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.name

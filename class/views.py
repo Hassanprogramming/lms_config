@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import View
-from .models import Classes
+from .models import *
 from home.forms import AddCommentForm
 from django.urls import reverse
 from django.http import HttpResponseRedirect
@@ -25,9 +25,11 @@ class ClassesView(View):
 class CourseDetailView(View):
     def get(self, request, slug):
         course = get_object_or_404(Classes, slug=slug)
+        video_category = VideoCategory.objects.filter(videoclass__in=course.video.all()).distinct()
         form = AddCommentForm()
         context = {
             "course": course,
+            "video_category": video_category,
             "form": form,
         }
         return render(request, "class/course_detail.html", context)

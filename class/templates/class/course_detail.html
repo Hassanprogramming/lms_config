@@ -174,104 +174,51 @@
                     </div>
                     <!-- overview description -->
                   </div>
-                  <div
-                    class="tab-pane fade"
-                    id="curriculam"
-                    role="tabpanel"
-                    aria-labelledby="curriculam-tab"
-                  >
+                  <div class="tab-pane fade" id="curriculam" role="tabpanel" aria-labelledby="curriculam-tab">
                     <div class="curriculam-cont">
                       <div class="title">
-                        <h6>{{course.name}}</h6>
+                        <h6>{{ course.name }}</h6>
                       </div>
-                      {% for video in course.video.all %}
                       <div class="accordion" id="accordionExample">
-                        <div class="card">
-                          <div class="card-header" id="heading{{ video.id }}">
-                            <a
-                              href="#"
-                              data-toggle="collapse"
-                              data-target="#collapse{{ video.id }}"
-                              aria-expanded="true"
-                              aria-controls="collapse{{ video.id }}"
-                            >
-                              <ul>
-                                <li><i class="fa fa-file-o"></i></li>
-                                <li>
-                                  <span class="head"
-                                    >{{ video.name|safe }}</span
-                                  >
-                                </li>
-                              </ul>
-                            </a>
-                          </div>
-
-                          <div
-                            id="collapse{{ video.id }}"
-                            class="collapse"
-                            aria-labelledby="heading{{ video.id }}"
-                            data-parent="#accordionExample"
-                          >
-                            <div class="card-body">
-                              <p>{{ video.text|safe }}</p>
-                              <br />
-                              {% if video.video %}
-                              <a href="{{ video.video.url }}" target="_blank"
-                                >تماشا کنید</a
+                        {% for video_category in video_category %}
+                          <div class="card">
+                            <div class="card-header" id="category{{ video_category.id }}">
+                              <a
+                                href="#"
+                                data-toggle="collapse"
+                                data-target="#collapseCategory{{ video_category.id }}"
+                                aria-expanded="true"
+                                aria-controls="collapseCategory{{ video_category.id }}"
                               >
-                              {% else %} ویدئو موجود نیست {% endif %}
+                                <h4>{{ video_category.name }}</h4>
+                              </a>
+                            </div>
+                            <div
+                              id="collapseCategory{{ video_category.id }}"
+                              class="collapse"
+                              aria-labelledby="category{{ video_category.id }}"
+                              data-parent="#accordionExample"
+                            >
+                              <div class="card-body">
+                                {% for video in video_category.videoclass_set.all %}
+                                  <div class="video-item">
+                                    <h5>{{ video.name }}</h5>
+                                    <p>{{ video.text|safe }}</p>
+                                    <a href="{{ video.video_link }}">video link</a>
+                                    <br>
+                                    {% if video.video %}
+                                      <a href="{{ video.video.url }}" target="_blank">Watch Video</a>
+                                    {% else %}
+                                      Video not available
+                                    {% endif %}
+                                  </div>
+                                {% endfor %}
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      {% endfor %}
-                    </div>
-                    <!-- curriculam cont -->
-                  </div>
-                  <div
-                    class="tab-pane fade"
-                    id="instructor"
-                    role="tabpanel"
-                    aria-labelledby="instructor-tab"
-                  >
-                    <div class="instructor-cont">
-                      <div class="instructor-author">
-                        <div class="author-thum">
-                          <img
-                            src="images/instructor/i-1.jpg"
-                            alt="Instructor"
-                          />
-                        </div>
-                        <div class="author-name">
-                          <a href="#"><h5>سومن حسن</h5></a>
-                          <span>توسعه دهنده Senior WordPress</span>
-                          <ul class="social">
-                            <li>
-                              <a href="#"><i class="fa fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                              <a href="#"><i class="fa fa-instagram"></i></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="instructor-description pt-25">
-                        <p>
-                          لورم ایپسوم دلور سیت آمت، کنسیسیکتتور آدیپیسیکینگ
-                          الیت. دلیکتوس فوگا راتیونه مولستیه اونده پروویدنت
-                          کوئیبوسدام سونت، دلورمقو. اررور امنیس مولیتیا، اکس
-                          دلور سقی. ات، کوئیبوسدام اکسکپتوری. انیمی آسومندا،
-                          کونسکونتور دولوروم اوتم؟
-                        </p>
+                        {% endfor %}
                       </div>
                     </div>
-                    <!-- instructor cont -->
                   </div>
                   <div
                     class="tab-pane fade"
