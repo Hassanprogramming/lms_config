@@ -77,3 +77,4 @@ Method: GET, URL: /, Timestamp: 1700935710.2941701, Status Code: 200, Response T
 Method: GET, URL: /about/, Timestamp: 1700935738.4442892, Status Code: 200, Response Timestamp: 1700935738.4612887, Total Time Taken: 0.016999 seconds
 Method: GET, URL: /, Timestamp: 1700935774.5610454, Status Code: 200, Response Timestamp: 1700935774.564046, Total Time Taken: 0.003000 seconds
 Error in logging request-response: Error in constructing log message: 'NoneType' object has no attribute 'status_code'
+Error in logging request-response: Error in constructing log message: 'NoneType' object has no attribute 'status_code'
