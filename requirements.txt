@@ -5,3 +5,172 @@ django-tinymce==3.6.1
 Pillow==10.1.0
 sqlparse==0.4.4
 tzdata==2023.3
+class ExportCsv(viewsets.ModelViewSet):
+
+    queryset = DefinedFaceLog.objects.all()
+
+    ordering_fields = ["created_at"]
+
+    ordering = ["-created_at"]
+
+    serializer_class = DefinedFaceLogCsvSerializer
+
+    filterset_class = DefinedFaceLogFilter
+
+    paginator = None
+
+
+
+    def get_permissions(self):
+
+        if self.action in ["create"]:
+
+            permission_classes = [AllowAny]
+
+        else:
+
+            return super().get_permissions()
+
+
+
+        return [permission() for permission in permission_classes]
+
+
+
+    def get_queryset(self):
+
+        request = self.request
+
+        filters = []
+
+        kwfilters = {}
+
+        unknown = False
+
+
+
+        for key, value in request.query_params.items():
+
+            if key.startswith("dist__"):
+
+                kwfilters[f"log__{key}"] = float(value)
+
+            elif key == "timestamp__lte":
+
+                kwfilters["created_at__lte"] = value
+
+            elif key == "timestamp__gte":
+
+                kwfilters["created_at__gte"] = value
+
+            elif key == "user_id":
+
+                if user_ids := value.split(","):
+
+                    kwfilters["ullog__employee__id__in"] = user_ids
+
+            elif key == "cameras":
+
+                if streams := value.split(","):
+
+                    kwfilters["stream_id__in"] = streams
+
+            elif key == "unknown":
+
+                unknown = True
+
+
+
+        if not unknown:
+
+            filters.append(~Q(log__id=-1))
+
+
+
+        return self.queryset.filter(log__dist__gte=0.43).filter(*filters, **kwfilters)
+
+
+
+    @action(detail=False, methods=["GET"])
+
+    def export_csv(self, request):
+
+        try:
+
+            # Check if any query parameters are present
+
+            if not request.query_params:
+
+                queryset = DefinedFaceLog.objects.all()  # No filters, export entire dataset
+
+            else:
+
+                # Apply filters as usual
+
+                queryset = self.get_queryset()
+
+
+
+            # Serialize the queryset using the DefinedFaceLogCsvSerializer
+
+            serializer = DefinedFaceLogCsvSerializer(queryset, many=True)
+
+
+
+            # Get the serialized data
+
+            data = serializer.data
+
+
+
+            response = HttpResponse(content_type='text/csv')
+
+            response['Content-Disposition'] = 'attachment; filename="exported_data.csv"'
+
+
+
+            csv_writer = csv.writer(response)
+
+
+
+            header = ["id", "created_at", "modified_at", "service_name", "stream_id", "timestamp", "employee_id", "employee_first_name", "employee_last_name", "dist"]
+
+            csv_writer.writerow(header)
+
+
+
+            for row in data:
+
+                csv_writer.writerow([
+
+                    row['id'],
+
+                    row['created_at'],
+
+                    row['modified_at'],
+
+                    row['service_name'],
+
+                    row['stream_id'],
+
+                    row['timestamp'],
+
+                    row['employee_id'],
+
+                    row['employee_first_name'],
+
+                    row['employee_last_name'],
+
+                    row['dist'],
+
+                ])
+
+
+
+            return response
+
+
+
+        except Exception as e:
+
+            return Response({"detail": f"Error exporting CSV: {str(e)}"}, status=500)
